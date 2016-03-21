@@ -3,7 +3,7 @@
 
 // Example: parseMolecule("[(CH3)4C2O2B]2") => {C: 12, H: 24, O: 4, B: 2} 
 
-//Should be able to handle formulas with deeply-nested groups of elements (including non-sensical examples like "H2O[(NaCl)5O2B]4")
+//Should be able to handle formulas with deeply-nested groups of elements (including non-sensical examples like "H2O[(NaCl[OH3]5)5O2B]4")
 
 var parseMolecule = function(formula) {
 
