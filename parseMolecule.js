@@ -1,4 +1,10 @@
 //recursively parses molecule formula and returns an object that counts the number of atoms of each element in molecule
+//Function takes a chemical formula and returns an object counting the number of atoms for each element in the compound. 
+
+// Example: parseMolecule("[(CH3)4C2O2B]2") => {C: 12, H: 24, O: 4, B: 2} 
+
+//Should be able to handle formulas with deeply-nested groups of elements (including non-sensical examples like "H2O[(NaCl)5O2B]4")
+
 var parseMolecule = function(formula) {
 
     //for TCO if available
