@@ -7,7 +7,7 @@
 
 var parseMolecule = function(formula) {
 
-    //for TCO if available
+    //for TCO if available...though kinda silly. Most chemical formulas aren't nested too deeply. 
     'use strict';
 
     //preprocess formula string and strip out the different braces/brackets and whitespace
