@@ -42,7 +42,8 @@ var parseMolecule = function(formula) {
         return parseMolecule(updatedFormula);
 
     } else {
-        /*takes something like "H6O3Cl3", splits into an array--i.e. ["H6","O3","Cl3"], and reduces array to returns an object with element counts for each /molecule--e.g. {H: 6, O: 3, Cl: 3}
+        /*takes something like "H6O3Cl3", splits into an array of elements--i.e. ["H6","O3","Cl3"], and reduces array 
+        to returns an object with element counts for each /molecule--e.g. {H: 6, O: 3, Cl: 3}
         */
         return moleculeToElementsArray(updatedFormula)
                 .reduce(function(elementCount, element) {
