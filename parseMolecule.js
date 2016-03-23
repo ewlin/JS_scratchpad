@@ -47,11 +47,11 @@ var parseMolecule = function(formula) {
         */
         return moleculeToElementsArray(updatedFormula)
                 .reduce(function(elementCount, element) {
-                    var numOf = element.match(nums) || 1;
+                    var numOf = Number(element.match(nums)) || 1;
                     if (elementCount.hasOwnProperty(element.match(atom)))
-                        elementCount[element.match(atom)] += Number(numOf);
+                        elementCount[element.match(atom)] += numOf;
                     else
-                        elementCount[element.match(atom)] = Number(numOf);
+                        elementCount[element.match(atom)] = numOf;
                     return elementCount;
                 }, {});
     }
