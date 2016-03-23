@@ -58,7 +58,7 @@ var parseMolecule = function(formula) {
     //helper function
     // "SO4" --> ",S,O4" --> ["","S","O4"] --> ["S","O4"]
     function moleculeToElementsArray(mole) {
-        return mole.replace(/([A-Z])/g, function(ele) { return ',' + ele })
+        return mole.replace(/([A-Z])/g, function(el) { return ',' + el })
                    .split(',')
                    .filter(function(el) {return !!el });
     }
