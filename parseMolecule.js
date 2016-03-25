@@ -32,7 +32,7 @@ var parseMolecule = function(formula) {
             
             // ["SO4","2"][0]--> "SO4" --> .... --> ["S","O4"].forEach(fn)...
             moleculeToElementsArray(innerMolArr[0]).forEach(function(ele) {
-                var numOf = Number(ele.replace(nums, function(digits) { return ',' + digits }).split(',')[1]) || 1;
+                var numOf = Number(ele.match(nums)) || 1; 
                 flattened += (ele.match(atom) + (numOf * multiple));
             });
 
